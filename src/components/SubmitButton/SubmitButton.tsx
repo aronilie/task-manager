@@ -8,4 +8,4 @@ const SubmitButton = ({ text }: SubmitButtonProps): JSX.Element => {
   return <SubmitButtonStyled />;
 };
 
-export default SubmitButtonStyled;
+export default SubmitButton;
