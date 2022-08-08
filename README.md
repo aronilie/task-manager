@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Componentes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## Formulario (Form)
 
-## Available Scripts
+- Recibe: Nada.
+- Estado: Ninguno.
+- Muestra: Un input para que el usuario añada una tarea y un botón para submitearla.
+- Acciones del usuario: Escribir la tarea que desee añadir.
 
-In the project directory, you can run:
+## Listado toDo (ToDoList)
 
-### `npm start`
+- Recibe: Nada.
+- Estado: Del context, la lista de tareas..
+- Muestra: Una lista de tareas generadas por el usuario.
+- Acciones del usuario: Ninguna.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Elemento del listado (ToDoTask)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Recibe: La tarea a mostrar y el estado de la misma (si está cumplida o no).
+- Estado: Ninguno.
+- Muestra:
+  - Si la tarea es nueva: una tarea pendiente de completar.
+  - Si la tarea ha sido completada: la misma tarea, tachada.
+  - Se mostrará un botón para eliminar la tarea.
+- Acciones del usuario:
+  - Marcar la tarea como completada.
+  - Eliminar la tarea.
 
-### `npm test`
+## Botón de tipo submit (FormButton)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Recibe: Texto a mostrar.
+- Estado: Ninguno.
+- Muestra: Un botón con el texto recibido.
+- Acciones del usuario: Al hacer click se hará submit del formulario.
 
-### `npm run build`
+# Capa de datos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cada tarea tendrá asociado un objeto con las siguientes propiedades:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Un id
+- No admite modificaciones
+- Un nombre (que será la descripción misma de la tarea)
+- No admite modificaciones (más allá de que el usuario pueda crear la tarea con el nombre que quiera)
+- Si la tarea ha sido completada o no
+- Admite modificaciones: en cualquier momento el usuario podrá pasarla de done a undone, y viceversa.
+- El propio objeto podrá ser eliminado a voluntad del usuario

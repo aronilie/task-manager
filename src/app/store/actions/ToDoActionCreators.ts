@@ -1,9 +1,9 @@
 import { TaskToDo } from "../../../features/ToDo/models/TaskToDo";
-import { addToDoTaskAction } from "../../../features/types/Actions";
+import { addTaskToDoAction } from "../../../features/types/Actions";
 
-export const addToDoTaskActionCreator = (
+export const addTaskToDoActionCreator = (
   task: TaskToDo
-): addToDoTaskAction => ({
+): addTaskToDoAction => ({
   type: "addToDoTask",
   payload: task,
 });
