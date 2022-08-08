@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
+import Form from "./components/Form";
 
 function App() {
-  return <p>App in progress...</p>;
+  return <Form />;
 }
 
 export default App;
