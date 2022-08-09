@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { TaskToDo } from "../ToDo/models/TaskToDo";
+import { TaskToDo } from "../models/TaskToDo";
 
 export const initialState: TaskToDo[] = [];
 
