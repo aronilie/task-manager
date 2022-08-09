@@ -1,6 +1,6 @@
-import { TaskToDo } from "../features/tasks/models/TaskToDo";
+import { Task } from "../features/tasks/models/Task";
 
-const tasks: TaskToDo[] = [
+const tasks: Task[] = [
   {
     id: 1,
     name: "Create components list",
