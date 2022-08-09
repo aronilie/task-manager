@@ -1,4 +1,4 @@
-import { TaskToDo } from "../../../features/ToDo/models/TaskToDo";
+import { TaskToDo } from "../models/TaskToDo";
 import { addTaskToDoAction } from "../../../features/types/Actions";
 
 export const addTaskToDoActionCreator = (

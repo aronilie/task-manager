@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import { taskToDoReducer } from "../../features/reducer/TaskToDoReducer";
+import { taskToDoReducer } from "../../features/tasks/reducer/TaskToDoReducer";
 
 export const store = configureStore({
   reducer: {
@@ -8,7 +8,9 @@ export const store = configureStore({
 });
 
 export type AppDispatch = typeof store.dispatch;
+
 export type RootState = ReturnType<typeof store.getState>;
+
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   RootState,

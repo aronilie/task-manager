@@ -1,4 +1,4 @@
-import { TaskToDo } from "../features/ToDo/models/TaskToDo";
+import { TaskToDo } from "../features/tasks/models/TaskToDo";
 
 const tasks: TaskToDo[] = [
   {
