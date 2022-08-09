@@ -1,6 +1,6 @@
 export enum ActionTypes {
   tasksLoad = "tasks@load",
   tasksUpload = "tasks@upload",
-  tasksAdd = "tasks@add",
+  tasksCreate = "tasks@create",
   tasksDelete = "tasks@delete",
 }
